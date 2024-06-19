@@ -1,0 +1,39 @@
+name: main
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      checks: write
+      pull-requests: write
+    services:
+      redis:
+        image: redis
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+        - 6379:6379
+    steps:
+    - uses: actions/checkout@v4
+    - uses: denoland/setup-deno@v1
+      with:
+        deno-version: v1.x
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+    - uses: oven-sh/setup-bun@v1
+      with:
+        bun-version: latest
+    - run: deno task test --junit-path=.test-report.xml
+    - uses: EnricoMi/publish-unit-test-result-action@v2
+      if: always()
+      with:
+        files: .test-report.xml
+    - run: deno task check
+    - run: deno task dnt
+    - run: bun run ./test_runner.js
+      working-directory: ${{ github.workspace }}/npm/

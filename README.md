@@ -1,3 +1,5 @@
+<!-- deno-fmt-ignore-file -->
+
 @fedify/redis
 =============
 
