@@ -1,0 +1,30 @@
+{
+  "deno": {
+    "enable": true
+  },
+  "ensure_final_newline_on_save": true,
+  "format_on_save": "on",
+  "formatter": "language_server",
+  "languages": {
+    "TypeScript": {
+      "language_servers": [
+        "deno",
+        "!typescript-language-server",
+        "!vtsls",
+        "!eslint",
+        "..."
+      ]
+    },
+    "TSX": {
+      "language_servers": [
+        "deno",
+        "!typescript-language-server",
+        "!vtsls",
+        "!eslint",
+        "..."
+      ]
+    }
+  },
+  "show_wrap_guides": true,
+  "wrap_guides": [80]
+}

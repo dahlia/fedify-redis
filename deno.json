@@ -1,0 +1,16 @@
+{
+  "name": "@fedify/redis",
+  "exports": {
+    ".": "./mod.ts",
+    "./codec": "./src/codec.ts",
+    "./kv": "./src/kv.ts"
+  },
+  "imports": {
+    "@fedify/fedify": "jsr:@fedify/fedify@^0.10.0",
+    "@std/assert": "jsr:@std/assert@^0.226.0",
+    "ioredis": "npm:ioredis@^5.4.0"
+  },
+  "tasks": {
+    "test": "deno test --allow-net --allow-env"
+  }
+}
