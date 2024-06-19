@@ -1,8 +1,4 @@
-import type {
-  KvKey,
-  KvStore,
-  KvStoreSetOptions,
-} from "@fedify/fedify/federation";
+import type { KvKey, KvStore, KvStoreSetOptions } from "@fedify/fedify";
 import type { Redis, RedisKey } from "ioredis";
 import { Buffer } from "node:buffer";
 import { type Codec, JsonCodec } from "./codec.ts";
@@ -45,7 +41,9 @@ export class RedisKvStore implements KvStore {
   }
 
   #serializeKey(key: KvKey): RedisKey {
-    const suffix = key.map((part) => part.replaceAll(":", "_:")).join("::");
+    const suffix = key
+      .map((part: string) => part.replaceAll(":", "_:"))
+      .join("::");
     if (typeof this.#keyPrefix === "string") {
       return `${this.#keyPrefix}${suffix}`;
     }
