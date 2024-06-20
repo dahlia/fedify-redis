@@ -10,8 +10,12 @@
     "@deno/dnt": "jsr:@deno/dnt@^0.41.2",
     "@fedify/fedify": "jsr:@fedify/fedify@^0.10.0",
     "@std/assert": "jsr:@std/assert@^0.226.0",
+    "@std/async": "jsr:@std/async@^0.224.2",
     "ioredis": "npm:ioredis@^5.4.0"
   },
+  "unstable": [
+    "temporal"
+  ],
   "exclude": [
     "npm"
   ],

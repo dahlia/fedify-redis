@@ -40,7 +40,23 @@ await build({
   outDir: "./npm",
   entryPoints: ["./mod.ts"],
   importMap,
-  shims: { deno: true },
+  shims: {
+    deno: true,
+    custom: [
+      {
+        package: {
+          name: "@js-temporal/polyfill",
+          version: "^0.4.4",
+        },
+        globalNames: [
+          {
+            name: "Temporal",
+            exportName: "Temporal",
+          },
+        ],
+      },
+    ],
+  },
   typeCheck: "both",
   declaration: "separate",
   declarationMap: true,

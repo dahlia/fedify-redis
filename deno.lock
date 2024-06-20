@@ -8,6 +8,7 @@
       "jsr:@logtape/logtape@^0.4.0": "jsr:@logtape/logtape@0.4.0",
       "jsr:@std/assert@^0.218.2": "jsr:@std/assert@0.218.2",
       "jsr:@std/assert@^0.226.0": "jsr:@std/assert@0.226.0",
+      "jsr:@std/async@^0.224.2": "jsr:@std/async@0.224.2",
       "jsr:@std/bytes@^0.218.2": "jsr:@std/bytes@0.218.2",
       "jsr:@std/bytes@^1.0.0": "jsr:@std/bytes@1.0.0",
       "jsr:@std/encoding@^0.224.3": "jsr:@std/encoding@0.224.3",
@@ -82,6 +83,9 @@
         "dependencies": [
           "jsr:@std/internal@^1.0.0"
         ]
+      },
+      "@std/async@0.224.2": {
+        "integrity": "4d277d6e165df43d5e061ba0ef3edfddb8e8d558f5b920e3e6b1d2614b44d074"
       },
       "@std/bytes@0.218.2": {
         "integrity": "91fe54b232dcca73856b79a817247f4a651dbb60d51baafafb6408c137241670"
@@ -549,6 +553,7 @@
       "jsr:@deno/dnt@^0.41.2",
       "jsr:@fedify/fedify@^0.10.0",
       "jsr:@std/assert@^0.226.0",
+      "jsr:@std/async@^0.224.2",
       "npm:ioredis@^5.4.0"
     ]
   }

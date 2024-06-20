@@ -8,7 +8,10 @@
 [![GitHub Actions][GitHub Actions badge]][GitHub Actions]
 
 This package provides [Fedify]'s [`KvStore`] and [`MessageQueue`]
-implementations for Redis.
+implementations for Redis:
+
+ -  [`RedisKvStore`]
+ -  [`RedisMessageQueue`]
 
 [JSR]: https://jsr.io/@fedify/redis
 [JSR badge]: https://jsr.io/badges/@fedify/redis
@@ -19,6 +22,8 @@ implementations for Redis.
 [Fedify]: https://fedify.dev/
 [`KvStore`]: https://jsr.io/@fedify/fedify/doc/federation/~/KvStore
 [`MessageQueue`]: https://jsr.io/@fedify/fedify/doc/federation/~/MessageQueue
+[`RedisKvStore`]: https://jsr.io/@fedify/redis/doc/kv/~/RedisKvStore
+[`RedisMessageQueue`]: https://jsr.io/@fedify/redis/doc/kv/~/RedisMessageQueue
 
 
 Changelog
