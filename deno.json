@@ -13,8 +13,7 @@
     "ioredis": "npm:ioredis@^5.4.0"
   },
   "exclude": [
-    "npm",
-    "*.md"
+    "npm"
   ],
   "tasks": {
     "check": "deno fmt --check && deno lint && deno check */*.ts",
