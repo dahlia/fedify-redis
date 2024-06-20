@@ -44,7 +44,7 @@ await build({
   typeCheck: "both",
   declaration: "separate",
   declarationMap: true,
-  test: true,
+  test: Deno.env.get("DNT_TEST") !== "false",
   async postBuild() {
     await Deno.copyFile("LICENSE", "npm/LICENSE");
     await Deno.copyFile("README.md", "npm/README.md");
