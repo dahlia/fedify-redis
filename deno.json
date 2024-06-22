@@ -1,6 +1,6 @@
 {
   "name": "@fedify/redis",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "exports": {
     ".": "./mod.ts",
     "./codec": "./src/codec.ts",
