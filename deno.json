@@ -4,7 +4,8 @@
   "exports": {
     ".": "./mod.ts",
     "./codec": "./src/codec.ts",
-    "./kv": "./src/kv.ts"
+    "./kv": "./src/kv.ts",
+    "./mq": "./src/mq.ts"
   },
   "imports": {
     "@deno/dnt": "jsr:@deno/dnt@^0.41.2",

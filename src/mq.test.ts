@@ -4,11 +4,20 @@ import { Redis } from "ioredis";
 import { RedisMessageQueue } from "./mq.ts";
 
 Deno.test("RedisMessageQueue", async (t) => {
+  const channelKey = `fedify_test_channel_${crypto.randomUUID()}`;
+  const queueKey = `fedify_test_queue_${crypto.randomUUID()}`;
+  const lockKey = `fedify_test_lock_${crypto.randomUUID()}`;
   const mq = new RedisMessageQueue(() => new Redis(), {
     loopInterval: { seconds: 1 },
+    channelKey,
+    queueKey,
+    lockKey,
   });
   const mq2 = new RedisMessageQueue(() => new Redis(), {
     loopInterval: { seconds: 1 },
+    channelKey,
+    queueKey,
+    lockKey,
   });
 
   const messages: string[] = [];

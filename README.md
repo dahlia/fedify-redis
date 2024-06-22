@@ -23,7 +23,7 @@ implementations for Redis:
 [`KvStore`]: https://jsr.io/@fedify/fedify/doc/federation/~/KvStore
 [`MessageQueue`]: https://jsr.io/@fedify/fedify/doc/federation/~/MessageQueue
 [`RedisKvStore`]: https://jsr.io/@fedify/redis/doc/kv/~/RedisKvStore
-[`RedisMessageQueue`]: https://jsr.io/@fedify/redis/doc/kv/~/RedisMessageQueue
+[`RedisMessageQueue`]: https://jsr.io/@fedify/redis/doc/mq/~/RedisMessageQueue
 
 
 Changelog
@@ -31,7 +31,9 @@ Changelog
 
 ### Version 0.1.1
 
-To be released.
+Released on June 22, 2024.
+
+ -  Exported `@fedify/redis/mq` module.
 
 ### Version 0.1.0
 

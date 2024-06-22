@@ -38,7 +38,11 @@ await build({
     },
   },
   outDir: "./npm",
-  entryPoints: ["./mod.ts"],
+  entryPoints: [
+    "./mod.ts",
+    { name: "./kv", path: "./src/kv.ts" },
+    { name: "./mq", path: "./src/mq.ts" },
+  ],
   importMap,
   shims: {
     deno: true,
