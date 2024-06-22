@@ -29,6 +29,10 @@ implementations for Redis:
 Changelog
 ---------
 
+### Version 0.1.1
+
+To be released.
+
 ### Version 0.1.0
 
 Initial release.  Released on June 22, 2024.
