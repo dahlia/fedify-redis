@@ -26,6 +26,28 @@ implementations for Redis:
 [`RedisMessageQueue`]: https://jsr.io/@fedify/redis/doc/mq/~/RedisMessageQueue
 
 
+Installation
+------------
+
+### Deno
+
+~~~~ sh
+deno add @fedify/redis
+~~~~
+
+### Node.js
+
+~~~~ sh
+npm install @fedify/redis
+~~~~
+
+### Bun
+
+~~~~ sh
+bun add @fedify/redis
+~~~~
+
+
 Changelog
 ---------
 
