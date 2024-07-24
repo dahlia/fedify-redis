@@ -51,6 +51,18 @@ export interface RedisMessageQueueOptions {
 
 /**
  * A message queue that uses Redis as the underlying storage.
+ *
+ * @example
+ * ```ts
+ * import { createFederation } from "@fedify/fedify";
+ * import { RedisMessageQueue } from "@fedify/redis";
+ * import { Redis } from "ioredis";
+ *
+ * const federation = createFederation({
+ *   // ...
+ *   queue: new RedisMessageQueue(() => new Redis()),
+ * });
+ * ```
  */
 export class RedisMessageQueue implements MessageQueue, Disposable {
   #redis: Redis;

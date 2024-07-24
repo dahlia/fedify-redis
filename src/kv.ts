@@ -22,6 +22,18 @@ export interface RedisKvStoreOptions {
 
 /**
  * A key-value store that uses Redis as the underlying storage.
+ *
+ * @example
+ * ```ts
+ * import { createFederation } from "@fedify/fedify";
+ * import { RedisKvStore } from "@fedify/redis";
+ * import { Redis } from "ioredis";
+ *
+ * const federation = createFederation({
+ *   // ...
+ *   kv: new RedisKvStore(new Redis()),
+ * });
+ * ```
  */
 export class RedisKvStore implements KvStore {
   #redis: Redis;

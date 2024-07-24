@@ -13,6 +13,17 @@ implementations for Redis:
  -  [`RedisKvStore`]
  -  [`RedisMessageQueue`]
 
+~~~~ typescript
+import { createFederation } from "@fedify/fedify";
+import { RedisKvStore, RedisMessageQueue } from "@fedify/redis";
+import { Redis } from "ioredis";
+
+const federation = createFederation({
+  kv: new RedisKvStore(new Redis()),
+  queue: new RedisMessageQueue(() => new Redis()),
+});
+~~~~
+
 [JSR]: https://jsr.io/@fedify/redis
 [JSR badge]: https://jsr.io/badges/@fedify/redis
 [npm]: https://www.npmjs.com/package/@fedify/redis
@@ -54,6 +65,8 @@ Changelog
 ### Version 0.1.2
 
 To be released.
+
+ -  Added some example code.
 
 ### Version 0.1.1
 
