@@ -3,6 +3,10 @@
 @fedify/redis: Redis drivers for Fedify
 =======================================
 
+> [!IMPORTANT]
+> This repository is obsolete and has been archived in favor of the monorepo
+> [fedify-dev/fedify].
+
 [![JSR][JSR badge]][JSR]
 [![npm][npm badge]][npm]
 [![GitHub Actions][GitHub Actions badge]][GitHub Actions]
@@ -24,6 +28,7 @@ const federation = createFederation({
 });
 ~~~~
 
+[fedify-dev/fedify]: https://github.com/fedify-dev/fedify
 [JSR]: https://jsr.io/@fedify/redis
 [JSR badge]: https://jsr.io/badges/@fedify/redis
 [npm]: https://www.npmjs.com/package/@fedify/redis
